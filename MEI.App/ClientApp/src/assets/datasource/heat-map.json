@@ -1,0 +1,217 @@
+{
+  "result": true,
+  "data": [
+    {
+      "EmpID": 1,
+      "EmpName": "John Smith",
+      "MEIScore": 10,
+      "Competative1": 10,
+      "Competative2": 20,
+      "Competative3": 30,
+      "Competative4": 40,
+      "Competative5": 50,
+      "Competative6": 60,
+      "Competative7": 70,
+      "Competative8": 100,
+      "Competative9": 90,
+      "Competative10": 80
+    },
+    {
+      "EmpID": 2,
+      "EmpName": "Kirk Adwin",
+      "MEIScore": 20,
+      "Competative1": 10,
+      "Competative2": 20,
+      "Competative3": 30,
+      "Competative4": 40,
+      "Competative5": 50,
+      "Competative6": 60,
+      "Competative7": 70,
+      "Competative8": 100,
+      "Competative9": 90,
+      "Competative10": 80
+    },
+    {
+      "EmpID": 3,
+      "EmpName": "Bob Smith",
+      "MEIScore": 30,
+      "Competative1": 10,
+      "Competative2": 20,
+      "Competative3": 30,
+      "Competative4": 40,
+      "Competative5": 50,
+      "Competative6": 60,
+      "Competative7": 70,
+      "Competative8": 100,
+      "Competative9": 90,
+      "Competative10": 80
+    },
+    {
+      "EmpID": 4,
+      "EmpName": "John Doe",
+      "MEIScore": 40,
+      "Competative1": 10,
+      "Competative2": 20,
+      "Competative3": 30,
+      "Competative4": 40,
+      "Competative5": 50,
+      "Competative6": 60,
+      "Competative7": 70,
+      "Competative8": 100,
+      "Competative9": 90,
+      "Competative10": 80
+    },
+    {
+      "EmpID": 5,
+      "EmpName": "Paul Adams",
+      "MEIScore": 50,
+      "Competative1": 10,
+      "Competative2": 20,
+      "Competative3": 30,
+      "Competative4": 40,
+      "Competative5": 50,
+      "Competative6": 60,
+      "Competative7": 70,
+      "Competative8": 100,
+      "Competative9": 90,
+      "Competative10": 80
+    },
+    {
+      "EmpID": 6,
+      "EmpName": "John Smith",
+      "MEIScore": 10,
+      "Competative1": 10,
+      "Competative2": 20,
+      "Competative3": 30,
+      "Competative4": 40,
+      "Competative5": 50,
+      "Competative6": 60,
+      "Competative7": 70,
+      "Competative8": 100,
+      "Competative9": 90,
+      "Competative10": 80
+    },
+    {
+      "EmpID": 7,
+      "EmpName": "John Smith",
+      "MEIScore": 10,
+      "Competative1": 10,
+      "Competative2": 20,
+      "Competative3": 30,
+      "Competative4": 40,
+      "Competative5": 50,
+      "Competative6": 60,
+      "Competative7": 70,
+      "Competative8": 100,
+      "Competative9": 90,
+      "Competative10": 80
+    },
+    {
+      "EmpID": 8,
+      "EmpName": "John Smith",
+      "MEIScore": 10,
+      "Competative1": 10,
+      "Competative2": 20,
+      "Competative3": 30,
+      "Competative4": 40,
+      "Competative5": 50,
+      "Competative6": 60,
+      "Competative7": 70,
+      "Competative8": 100,
+      "Competative9": 90,
+      "Competative10": 80
+    },
+    {
+      "EmpID": 9,
+      "EmpName": "John Smith",
+      "MEIScore": 10,
+      "Competative1": 10,
+      "Competative2": 20,
+      "Competative3": 30,
+      "Competative4": 40,
+      "Competative5": 50,
+      "Competative6": 60,
+      "Competative7": 70,
+      "Competative8": 100,
+      "Competative9": 90,
+      "Competative10": 80
+    }
+  ],
+  "fields": [
+    {
+      "Name": "EmpID",
+      "DisplayName": "Emp ID"
+    },
+    {
+      "Name": "EmpName",
+      "DisplayName": "Emp Name"
+    },
+    {
+      "Name": "MEIScore",
+      "DisplayName": "MEI SCORE"
+    },
+    {
+      "Name": "Competative1",
+      "DisplayName": "INNOVATIVE"
+    },
+    {
+      "Name": "Competative2",
+      "DisplayName": "EMPOWERS TEAM"
+    },
+    {
+      "Name": "Competative3",
+      "DisplayName": "TEAM ENVIRONMENT"
+    },
+    {
+      "Name": "Competative4",
+      "DisplayName": "PRODUCTIVE"
+    },
+    {
+      "Name": "Competative5",
+      "DisplayName": "GOOD COMMUNICATION"
+    },
+    {
+      "Name": "Competative6",
+      "DisplayName": "SUPPORTIVE"
+    },
+    {
+      "Name": "Competative7",
+      "DisplayName": "CLEAR VISION"
+    },
+    {
+      "Name": "Competative8",
+      "DisplayName": "TECHNICAL SKILLS"
+    },
+    {
+      "Name": "Competative9",
+      "DisplayName": "COLLABORATE"
+    },
+    {
+      "Name": "Competative10",
+      "DisplayName": "DESICION MAKER"
+    }
+  ],
+  "colorCode": [
+    {
+      "Field": "Range1",
+      "value": "20"
+    },
+    {
+      "Field": "Range2",
+      "value": "30"
+    },
+    {
+      "Field": "Range3",
+      "value": "50"
+    },
+    {
+      "Field": "Range4",
+      "value": "60"
+    },
+    {
+      "Field": "Range5",
+      "value": "80"
+    }
+  ],
+  "message": null
+}

@@ -1,0 +1,53 @@
+<my-custom-spinner [loading]="loading"></my-custom-spinner>
+<p-growl [life]="growlLife" [(value)]="msgs"></p-growl>
+<div class="theme-detail-inner" id="summary">
+    <div class="container">
+        <ul class="breadcrumb que-breadcrumbs">
+            <li>
+                <a routerLink="/home">Home</a>
+            </li>
+            <li class="active">Publish Result</li>
+        </ul>
+        <div class="page-heading-top">
+            <div class="row">
+                <div class="col-sm-3 slider-left-side">
+                    <h1>Publish Result</h1>
+
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="col-sm-9 slider-right-side">
+
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="survey-section">
+    <div class="container" id="loginMid">
+        <div class="row">
+            <div class="loginWidth">
+
+                <div class="wrapperLoginForm box">
+
+                    <div class="error-template">
+                        <h1>Publish Result</h1>
+                        <h2 *ngIf="objActiveCycle">
+                            {{objActiveCycle['displayName'] + ' (' + objActiveCycle['periods'] + ')'}}
+                            <button class="btn btn-lg btn-save pull-right" type="button" (click)="onSubmit()">SUBMIT</button>
+                        </h2>
+                        <h2 *ngIf="!objActiveCycle">There is no active cycle.</h2>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

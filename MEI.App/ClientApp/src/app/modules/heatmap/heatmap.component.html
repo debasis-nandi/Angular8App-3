@@ -1,0 +1,152 @@
+<my-custom-spinner [loading]="loading"></my-custom-spinner>
+<p-growl [life]="growlLife" [(value)]="msgs"></p-growl>
+<div class="theme-detail-inner" id="summary">
+    <div class="container">
+        <ul class="breadcrumb que-breadcrumbs">
+            <li>
+                <a routerLink="/home">Home</a>
+            </li>
+            <li class="active">Manager Heat Map</li>
+        </ul>
+        <div class="page-heading-top">
+            <div class="row">
+                <div class="col-sm-3 slider-left-side">
+                    <h1>Manager Heat Map</h1>
+
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="col-sm-9 slider-right-side">
+
+                    <div class="main-filters pull-right">
+                        <div class="main-filters-box " id="sandbox-container">
+
+                            <label>
+                                <i class="fa fa-calendar" aria-hidden="true"></i> Cycle</label>
+                                <select name="cycle" id="cycle" [(ngModel)]="selectedCycle">
+                                    <!-- <option value="">Select</option> -->
+                                    <option *ngFor="let option of cycleOption" [value]="option.value" >{{option.label}}</option>
+                                </select>
+
+                        </div>
+
+                        <div class="main-filters-box" *ngIf="!isUser">
+                            <label for="rank">
+                                <img src="{{ imgPath + 'rank.png' }}">Rank</label>
+                            <select name="rank" id="rank" [(ngModel)]="selectedRank">
+                                <!-- <option value="">Select</option> -->
+                                <option *ngFor="let option of rankOption" [value]="option.value" >{{option.label}}</option>
+                            </select>
+
+
+                        </div>
+
+                        <div class="filter-divider"></div>
+
+                        <div class="main-filters-box main-filters-box2" *ngIf="!isUser">
+                            <select name="order" id="order" [(ngModel)]="selectedOrder">
+                                <option *ngFor="let option of orderOption" [value]="option.value" >{{option.label}}</option>
+                            </select>
+
+
+                        </div>
+                        <div class="main-filters-btn">
+                            <a href="javascript:void(0)">
+                                <button class="btn btn-save" (click)="onFilter()">Apply Filters</button>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="clearfix"></div>
+                </div>
+
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="survey-section">
+    <div class="container">
+        <div class="surveyBox">
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <!-- <div class="search-by-name-sec managerHeatMapSearch">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-5 col-xs-6">
+                                <ul>
+                                    <li>
+                                        <input autocomplete="off" class="form-control ng-untouched ng-pristine ng-valid" name="q"
+                                            placeholder="Search by Name" type="text">
+                                    </li>
+                                </ul>
+                                <ul>
+
+                                </ul>
+                            </div>
+                            <div class="col-md-8 col-sm-7 col-xs-6">
+                                <ul class="heatMapColors pull-right">
+                                    <li class="low-color">LOW</li>
+                                    <li class="low2-color"></li>
+                                    <li class="high2-color"></li>
+                                    <li class="high-color">HIGH</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div *ngIf="tabTableConfig.rows.length > 0" class="borderBoxTblDiv managerHeatMapTable">
+                        <my-datatable id="tblHeatMap" [tableName]="tabTableName" [table]="tabTableConfig.table" [columns]="tabTableConfig.columns"
+                            [rows]="tabTableConfig.rows" [totalRecords]="totalRecords" [colorCodeRange]="colorCodeRange"
+                            (valueChange)='onAction($event)'>
+                        </my-datatable>
+                    </div>
+                    <div *ngIf="tabTableConfig.rows.length == 0" class="no-record-found">
+                        No records found
+                    </div>
+
+                    <div class="managerHeatMap_section2" *ngIf="isUser && commentList.length > 0">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <div class="mHM_sction2Box">
+                                    <h4>{{commentList[0]['questionText']}}</h4>
+                                    <ng-container *ngFor="let item of comment1List">
+                                        <hr>
+                                        <p>{{item}}</p>
+                                    </ng-container>
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <div class="mHM_sction2Box">
+                                    <h4>{{commentList[1]['questionText']}}</h4>
+                                    <ng-container *ngFor="let item of comment2List">
+                                        <hr>
+                                        <p>{{item}}</p>
+                                    </ng-container>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- START **** ChatBox -->
+    <div id="floating-container">
+        <div>
+            <i class="arrow-up"></i>
+            <br>TOP</div>
+    </div>
+    <!-- END **** ChatBox -->
+
+</div>

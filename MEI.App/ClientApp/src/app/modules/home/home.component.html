@@ -1,0 +1,61 @@
+<my-custom-spinner [loading]="loading"></my-custom-spinner>
+<p-growl [life]="growlLife" [(value)]="msgs"></p-growl>
+<div class="theme-detail" id="summary">
+    <div class="container">
+        <div class="theme-detail-left">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Dashboard</h1>
+                </div>
+            </div>
+            <div class="row dashboard-section">
+                <div class="col-sm-4 ">
+                    <div class="dashboard-box dashboard-box1" (click)="onFaq()">
+                        <img class="icon-img" src="{{ imgPath + 'Dashboard-1.png' }}">
+                        <h3>Survey Objectives</h3>
+                        <p></p>
+                        <hr>
+                        <p style="margin-bottom: 0px !important;">
+                            <span>VIEW DETAILS
+                                <img src="{{ imgPath + 'triangle-arrow.png' }}">
+                            </span>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="dashboard-box dashboard-box2" (click)="onHeatMap()">
+                        <img class="icon-img" src="{{ imgPath + 'Dashboard-2.png' }}">
+                        <h3>Manager Heat Map</h3>
+                        <p></p>
+                        <hr>
+                        <p style="margin-bottom: 0px !important;">
+                            <span>VIEW DETAILS
+                                <img src="{{ imgPath + 'triangle-arrow.png' }}">
+                            </span>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="dashboard-box dashboard-box3" (click)="onSurveyTrend()">
+                        <img class="icon-img" src="{{ imgPath + 'Dashboard-3.png' }}">
+                        <h3>Survey Trend</h3>
+                        <p></p>
+                        <hr>
+                        <p style="margin-bottom: 0px !important;">
+                            <span>VIEW DETAILS
+                                <img src="{{ imgPath + 'triangle-arrow.png' }}">
+                            </span>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

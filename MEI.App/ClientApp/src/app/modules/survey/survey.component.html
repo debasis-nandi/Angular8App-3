@@ -1,0 +1,118 @@
+<my-custom-spinner [loading]="loading"></my-custom-spinner>
+<p-growl [life]="growlLife" [(value)]="msgs"></p-growl>
+<div class="theme-detail-inner" id="summary">
+    <div class="container" *ngIf="competencyList.length > 0">
+
+        <div class="page-heading-top">
+            <div class="row">
+                <div class="col-sm-6 slider-left-side">
+                    <h1>{{ competencyIndex+1 + '. ' + competencyList[competencyIndex].competencyName}}</h1>
+
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="col-sm-6 slider-right-side">
+
+                    <div class="progress pull-right">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" [ngStyle]="progressbarCss">
+                            <span>{{competencyList[competencyIndex].completionPercent + '%'}}</span>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="survey-section">
+    <div class="container" *ngIf="competencyList.length > 0">
+        <div class="surveyBox">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="surveyQ surveyQ1" *ngFor="let item of competencyList[competencyIndex].questionMaster; let i = index">
+                        <p>{{item.questionText}}</p>
+                        <div class="survey-radio">
+                            <input type="radio" name="{{'Q'+i}}" value="5" [(ngModel)]="item.answer" (change)="onChangeRating($event, i)">
+                            <label for="Strongly Agree">Strongly Agree</label>
+                        </div>
+                        <div class="survey-radio">
+                            <input type="radio" name="{{'Q'+i}}" value="4" [(ngModel)]="item.answer" (change)="onChangeRating($event, i)">
+                            <label for="Agree">Agree</label>
+                        </div>
+                        <div class="survey-radio">
+                            <input type="radio" name="{{'Q'+i}}" value="3" [(ngModel)]="item.answer" (change)="onChangeRating($event, i)">
+                            <label for="Neither Agree Nor Disagree">Neither Agree Nor Disagree</label>
+                        </div>
+                        <div class="survey-radio">
+                            <input type="radio" name="{{'Q'+i}}" value="2" [(ngModel)]="item.answer" (change)="onChangeRating($event, i)">
+                            <label for="Disagree">Disagree</label>
+                        </div>
+                        <div class="survey-radio">
+                            <input type="radio" name="{{'Q'+i}}" value="1" [(ngModel)]="item.answer" (change)="onChangeRating($event, i)">
+                            <label for="Strongly Disagree">Strongly Disagree</label>
+                        </div>
+
+                        <div class="error" *ngIf="!item.isValid">Required</div>
+                    </div>
+
+                    <div class="surveyFeedback" *ngIf="competencyIndex == (competencyList.length-1)">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p>Qualitative Feedback</p>
+                                <hr>
+                                <ng-container *ngFor="let item of commentQuestionList; let i = index">
+                                    <label for="feedbackQ1">{{i+1 +'. '+ item.questionText}}</label>
+                                    <br>
+                                    <textarea name="{{'feedbackQ'+ i + 1}}" rows="5" cols="70" [(ngModel)]="item.answer" (input)="onCommentChange($event.target.value, i)">
+                                    </textarea>
+                                    <div class="error" *ngIf="!item.isValid">Required</div>
+                                    <br>
+                                    <br>
+                                </ng-container>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="surveyQFoot">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p class="surveyFootNote">{{competencyIndex+1}} Out of {{competencyList.length}} Competencies</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="pull-right">
+                                    <button class="btn" id="prev" (click)="onPrev()" [disabled]="competencyIndex > 0 ? false : true">
+                                        <i class="fa fa-angle-left" aria-hidden="true"></i> Prev
+                                    </button>
+                                    <button class="btn" id="next" (click)="onNext()" [disabled]="competencyIndex == (competencyList.length-1) ? true : false">Next
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="surveySubmit" *ngIf="competencyIndex == (competencyList.length-1)">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <hr>
+                                <button class="btn" (click)="onSurveySubmit()"> SUBMIT SURVEY
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+#prev{ margin-right: 10px; }
+
+div #successfulSubmit{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    background-color: #00000042;
+}
+
+#successfulSubmit .submit-dialog{
+    width: 450px;
+    margin: 13% auto;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #989898;
+}
+
+#successfulSubmit .submit-header .close{
+    opacity: 0.5;
+    font-size: 32px;
+    font-weight: normal;
+    float: none;
+}
+
+#successfulSubmit .submit-body{
+    padding: 15px 5px 30px 5px;
+}
+
+#successfulSubmit .submit-body p{
+    color: #112037;
+    font-family: 'FSAlbert Bold';
+    font-size: 18px;
+    margin-top: 20px;
+}

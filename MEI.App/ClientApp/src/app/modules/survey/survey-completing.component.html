@@ -1,0 +1,28 @@
+<div class="survey-section" style="min-height: 73.5vh;">
+    <div class="container">
+        <div class="surveyBox">
+            <div class="row">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="successfulSubmit" role="dialog">
+    <div class="submit-dialog">
+  
+      <!-- Modal content-->
+      <div class="submit-content">
+        <div class="submit-header text-right">
+          <button type="button" class="close"></button>
+        </div>
+        <div class="submit-body text-center">
+          <img *ngIf="isComplete" src="{{ imgPath + 'thankyou.png' }}">
+          <img *ngIf="isClose" src="{{ imgPath + 'thankyou2.png' }}">
+          <p *ngIf="isComplete">Thanks for completing the survey</p>
+          <p *ngIf="isClose">Survey has been closed</p>
+        </div>
+       
+      </div>
+  
+    </div>
+  </div>

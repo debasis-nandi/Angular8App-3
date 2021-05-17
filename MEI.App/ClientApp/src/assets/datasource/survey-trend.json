@@ -1,0 +1,84 @@
+{
+    "result": true,
+    "data": [
+        {
+            "empName": "Rigvinath Chevala",
+            "empID": "263769",
+            "cycle1": 38,
+            "cycle2": 50,
+            "cycle3": 0,
+            "cycle4": 50,
+            "cycle5": 100,
+            "cycle6": 0,
+            "cycle7": 50,
+            "cycle8": 100,
+            "cycle9": 0,
+            "cycle10": 0
+        },
+        {
+            "empName": "Rigvinath Chevala",
+            "empID": "263769",
+            "cycle1": 38,
+            "cycle2": 50,
+            "cycle3": 0,
+            "cycle4": 50,
+            "cycle5": 100,
+            "cycle6": 0,
+            "cycle7": 50,
+            "cycle8": 100,
+            "cycle9": 0,
+            "cycle10": 0
+        }
+    ],
+    "message": "Success",
+    "fields": [
+        {
+            "name": "empID",
+            "displayName": "Emp ID"
+        },
+        {
+            "name": "empName",
+            "displayName": "Emp Name"
+        },
+        {
+            "name": "cycle1",
+            "displayName": "SURVEY 1"
+        },
+        {
+            "name": "cycle2",
+            "displayName": "SURVEY 2"
+        },
+        {
+            "name": "cycle3",
+            "displayName": "SURVEY 3"
+        },
+        {
+            "name": "cycle4",
+            "displayName": "SURVEY 4"
+        },
+        {
+            "name": "cycle5",
+            "displayName": "SURVEY 5"
+        },
+        {
+            "name": "cycle6",
+            "displayName": "SURVEY 6"
+        },
+        {
+            "name": "cycle7",
+            "displayName": "SURVEY 7"
+        },
+        {
+            "name": "cycle8",
+            "displayName": "SURVEY 8"
+        },
+        {
+            "name": "cycle9",
+            "displayName": "SURVEY 9"
+        },
+        {
+            "name": "cycle10",
+            "displayName": "SURVEY 10"
+        }
+    ]
+}

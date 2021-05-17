@@ -1,0 +1,80 @@
+<section>
+    <!-- Header Menu Start -->
+    <div class="panel-section">
+        <nav class="navbar navbar-default">
+            <div class="row navRow">
+                <div class="col-md-10 col-sm-10 col-xs-12">
+                    <div class="navbar-left">
+                        <a href="javascript:void(0)" class="navbar-brand">
+                            <img class="hidelogo img-responsive" src="{{ imgPath + 'logo.png' }}" alt="" />
+                            <img class="displaylogo img-responsive" src="{{ imgPath + 'logo.png' }}" alt="" />
+                        </a>
+                    </div>
+
+                    <div class="navbar-right displaylogo">
+                        <div class="navbar">
+                            <ul class="nav navbar-nav navbar-right">
+
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+                                        <img src="{{ imgPath + 'prfile_icon.png' }}" alt="">
+                                        <span class="hidetext profile-name">Username
+                                            <br>
+                                            <span class="profile-name-des">ADMIN</span>
+                                        </span>
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul id="g-account-menu" class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="javascript:void(0)">My Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">Logout</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-2 col-xs-12 hidelogo">
+                    <div class="navbar-right">
+                        <div class="navbar">
+                            <ul class="nav navbar-nav navbar-right">
+
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+                                        <img src="{{ imgPath + 'prfile_icon.png' }}" alt="">
+                                        <span class="hidetext profile-name">{{empDetails.empName}}
+                                            <br>
+                                            <!-- <span class="profile-name-des">ADMIN</span> -->
+                                        </span>
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul id="g-account-menu" class="dropdown-menu" role="menu">
+                                        <li class="switch-user">Switch Access
+                                            <ng-container *ngFor="let item of empDetails.roles">
+                                                <br>
+                                                <input type="radio" id="{{item.roleID}}" value="{{item.roleID}}" [checked]="item.roleID == empSelectedRole" (click)="onChangedRole($event,item.roleID)">
+                                                <label for="{{item.roleID}}">{{item.roleName}}</label>
+                                            </ng-container>
+                                        </li>
+                                        <li *ngIf="isAdmin">
+                                            <a href="javascript:void(0)" (click)="onPublishResult()" class="admin-publish">Publish Result</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"(click)="onLogout()">Logout</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+    <!-- Header Menu End -->
+</section>

@@ -1,0 +1,7 @@
+{
+    "/xxapi/*": {
+        "target": "https://localhost:44392",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

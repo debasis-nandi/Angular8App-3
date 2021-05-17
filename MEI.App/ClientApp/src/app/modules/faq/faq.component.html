@@ -1,0 +1,66 @@
+<my-custom-spinner [loading]="loading"></my-custom-spinner>
+<p-growl [life]="growlLife" [(value)]="msgs"></p-growl>
+<div class="theme-detail-inner theme-long-heroimage" id="summary">
+    <div class="container">
+        <ul class="breadcrumb que-breadcrumbs">
+            <li>
+                <a routerLink="/home">Home</a>
+            </li>
+            <li class="active">Survey Objectives</li>
+        </ul>
+        <div class="page-heading-top">
+            <div class="row">
+                <div class="col-sm-6 slider-left-side">
+                    <h1>Survey Objectives</h1>
+
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="col-sm-6 slider-right-side">
+
+                    <div class="clearfix"></div>
+                </div>
+
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="survey-section">
+    <div class="container">
+        <div class="" *ngIf="faqList">
+            <div class="faq-box">
+                <div class="col-sm-3 padding0 faq-left">
+                    <ul class="nav nav-tabs">
+                        <li *ngFor="let item of faqList; let i=index;">
+                            <a [ngClass]="{'active': i == 0}" data-toggle="tab" href="javascript:void(0)" (click)="onSelectSection(item.id)">{{item.displayName}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-9 faq-right">
+                    <div class="tab-content" *ngIf="faq">
+                        <div id="surveyObjectives" class="tab-pane fade in active">
+                            <h4>{{faq.displayHeader}}</h4>
+                            <hr>
+                            <ng-container *ngFor="let item of faq.faQs; let i=index;">
+                                <h5 *ngIf="item.faQuestion">{{item.faQuestion}}</h5>
+                                <p *ngIf="item.faqAnswer" [innerHTML]="item.faqAnswer"></p>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- START **** ChatBox -->
+    <div id="floating-container">
+        <div>
+            <i class="arrow-up"></i>
+            <br>TOP</div>
+    </div>
+    <!-- END **** ChatBox -->
+
+</div>

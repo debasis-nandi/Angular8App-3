@@ -1,0 +1,138 @@
+<my-custom-spinner [loading]="loading"></my-custom-spinner>
+<p-growl [life]="growlLife" [(value)]="msgs"></p-growl>
+<div class="theme-detail-inner" id="summary">
+    <div class="container">
+        <ul class="breadcrumb que-breadcrumbs">
+            <li>
+                <a routerLink="/home">Home</a>
+            </li>
+            <li class="active">Survey Trend</li>
+        </ul>
+        <div class="page-heading-top">
+            <div class="row">
+                <div class="col-sm-3 slider-left-side">
+                    <h1>Survey Trend</h1>
+
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="col-sm-9 slider-right-side">
+
+                    <div class="main-filters pull-right">
+                        <!-- <div class="main-filters-box " id="sandbox-container">
+                            <label>
+                                <i class="fa fa-calendar" aria-hidden="true"></i> Period</label>
+                            <input type="text" class="form-control" value="Jan 1 - Dec 31, 2019">
+                        </div> -->
+
+                        <div class="main-filters-box">
+                            <label for="rank">
+                                <img src="{{ imgPath + 'rank.png' }}">View By</label>
+                            <select name="rank" id="rank" [(ngModel)]="selectedRank">
+                                <!-- <option value="">Select</option> -->
+                                <option *ngFor="let option of rankOption" [value]="option.value" >{{option.label}}</option>
+                            </select>
+
+
+                        </div>
+
+                        <div class="filter-divider"></div>
+
+                        <div *ngIf="!isUser && !isChart" class="main-filters-box main-filters-box2">
+                            <select name="rank" id="rank" [(ngModel)]="selectedOrder">
+                                <option *ngFor="let option of orderOption" [value]="option.value" >{{option.label}}</option>
+                            </select>
+                        </div>
+                        <div class="main-filters-btn">
+                            <a href="javascript:void(0)">
+                                <button class="btn btn-save" (click)="onApplyFilters()">Apply Filters</button>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="clearfix"></div>
+                </div>
+
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="survey-section">
+    <div class="container">
+      <div class="surveyBox">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="survey-trend-box">
+
+              <ul class="nav nav-tabs">
+                <li><a data-toggle="tab" href="#data" class="active" (click)="onSwitch('data')">Data</a></li>
+                <li><a data-toggle="tab" href="#chart" (click)="onSwitch('chart')">Chart</a></li>
+                <div *ngIf="!isUser && !isChart" class="pull-right" style="font-family: Open Sans, Helvetica Neue, sans-serif; font-size: 10pt;"><i><b>Note:</b> Data is sorted based on last cycle/survey.</i></div>
+              </ul>
+              
+              
+              <div class="tab-content">
+                <div id="data" class="tab-pane fade in active">
+                  <!-- <div class="search-by-name-sec managerHeatMapSearch">
+                    <div class="row">
+                      <div class="col-md-4 col-sm-5 col-xs-6">
+                        <ul>
+                          <li><input autocomplete="off" class="form-control ng-untouched ng-pristine ng-valid" name="q" placeholder="Search by Name" type="text"></li>
+                        </ul>
+                        <ul >
+                        
+                        </ul>
+                      </div>
+                      <div  class="col-md-8 col-sm-7 col-xs-6">
+                        
+                      </div>
+                    </div>
+                  </div> -->
+                  <div *ngIf="tabTableConfig.rows.length > 0" class="borderBoxTblDiv managerHeatMapTable surveyTable1">
+                    <my-datatable id="tblSurveyTrend" [tableName]="tabTableName" [table]="tabTableConfig.table" [columns]="tabTableConfig.columns"
+                      [rows]="tabTableConfig.rows" [totalRecords]="totalRecords" (valueChange)='onAction($event)'>
+                    </my-datatable>
+                  </div>
+                  <div *ngIf="tabTableConfig.rows.length == 0" class="no-record-found">
+                      No records found
+                  </div>
+                </div>
+                <div id="chart" class="tab-pane fade">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <!-- <img src="{{ imgPath + 'chart1.png' }}"> -->
+                        <p-chart #chart type="line" [data]="lineChartData" [options]="lineChartOptions"></p-chart>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+
+            
+            
+          </div>
+
+        </div>
+    </div>
+  </div>
+
+
+  <!-- START **** ChatBox -->
+<div id="floating-container">
+  <div><i class="arrow-up"></i><br>TOP</div>
+</div>
+<!-- END **** ChatBox -->
+
+
+</div>

@@ -1,0 +1,109 @@
+<section>
+    <!-- Header Menu Start -->
+    <div class="panel-section">
+        <nav class="navbar navbar-default">
+            <div class="row navRow">
+                <div class="col-md-10 col-sm-10 col-xs-12">
+                    <div class="navbar-left">
+                        <a href="javascript:void(0)" class="navbar-brand">
+                            <img class="hidelogo img-responsive" src="{{ imgPath + 'logo.png' }}" alt="" />
+                            <img class="displaylogo img-responsive" src="{{ imgPath + 'logo.png' }}" alt="" />
+                        </a>
+                    </div>
+
+                    <div class="navbar-right displaylogo">
+                        <div class="navbar">
+                            <ul class="nav navbar-nav navbar-right">
+
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+                                        <img src="{{ imgPath + 'prfile_icon.png' }}" alt="">
+                                        <span class="hidetext profile-name">Username
+                                            <br>
+                                            <span class="profile-name-des">ADMIN</span>
+                                        </span>
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul id="g-account-menu" class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="#">My Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="login-page.html">Logout</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-2 col-xs-12 hidelogo">
+                    <div class="navbar-right">
+                        <div class="navbar">
+                            <ul class="nav navbar-nav navbar-right" *ngIf="empDetails">
+
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+                                        <img src="{{ imgPath + 'prfile_icon.png' }}" alt="">
+                                        <span class="hidetext profile-name">{{empDetails.empName}}
+                                            <!-- <br>
+                                            <span class="profile-name-des">ADMIN</span> -->
+                                        </span>
+                                        <!-- <span class="caret"></span> -->
+                                    </a>
+                                    <!-- <ul id="g-account-menu" class="dropdown-menu" role="menu">
+                                        <li class="switch-user">Switch Access
+                                            <br>
+                                            <input type="radio" id="VP" name="switchAccess" value="VP" checked>
+                                            <label for="VP">VP</label>
+                                            <br>
+                                            <input type="radio" id="Manager" name="switchAccess" value="Manager">
+                                            <label for="Manager">Manager</label>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" (click)="onLogout()">Logout</a>
+                                        </li>
+                                    </ul> -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+    <!-- Header Menu End -->
+</section>
+<div class="ci-landing-page">
+
+    <router-outlet></router-outlet>
+
+    <div class="footer">
+        <div class="footer-top">
+            <div class="footer-left">
+                <a href="#" target="_blank">
+                    <img src="{{ imgPath + 'evalue_logo.png' }}" alt="" class="img-responsive">
+                </a>
+            </div>
+            <div class="footer-right">
+                <ul>
+
+                    <li>
+                        <!-- <a href="javascript:void(0);">Feedback</a> -->
+                        Feedback
+                    </li>
+                </ul>
+                <p>Write to us :
+                    <!-- <a href="mailto:globalhr@evalueserve.com">globalhr@evalueserve.com</a> -->
+                    <a href="javascript:void(0)" (click)="onWriteUs()">{{write2us}}</a>
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright {{getCurrentYear()}}. Evalueserve.com Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,714 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>MEI.App</Name>
+    <RootNamespace>MEI.App</RootNamespace>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d000f902-fd9f-4462-88e5-2e0ca9b4beec</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>server.ts</StartupFile>
+    <StartWebBrowser>True</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ClientApp\.editorconfig" />
+    <Content Include="ClientApp\.gitignore" />
+    <Content Include="ClientApp\angular.json" />
+    <Content Include="ClientApp\browserslist" />
+    <Content Include="ClientApp\package-lock.json" />
+    <Content Include="ClientApp\package.json" />
+    <Content Include="ClientApp\proxy.conf.json" />
+    <Content Include="ClientApp\README.md" />
+    <Content Include="ClientApp\src\app\modules\authentication\authentication.component.css" />
+    <Content Include="ClientApp\src\app\modules\authentication\authentication.component.html" />
+    <Content Include="ClientApp\src\app\modules\bridge2home\bridge2home.component.html" />
+    <Content Include="ClientApp\src\app\modules\error\error.component.css" />
+    <Content Include="ClientApp\src\app\modules\error\error.component.html" />
+    <Content Include="ClientApp\src\app\modules\error\page-not-found.component.html" />
+    <Content Include="ClientApp\src\app\modules\error\unauthorized.component.html" />
+    <Content Include="ClientApp\src\app\modules\faq\faq.component.css" />
+    <Content Include="ClientApp\src\app\modules\faq\faq.component.html" />
+    <Content Include="ClientApp\src\app\modules\heatmap\heatmap.component.css" />
+    <Content Include="ClientApp\src\app\modules\heatmap\heatmap.component.html" />
+    <Content Include="ClientApp\src\app\modules\home\home.component.css" />
+    <Content Include="ClientApp\src\app\modules\home\home.component.html" />
+    <Content Include="ClientApp\src\app\modules\surveytrend\surveytrend.component.css" />
+    <Content Include="ClientApp\src\app\modules\surveytrend\surveytrend.component.html" />
+    <Content Include="ClientApp\src\app\modules\survey\survey.component.css" />
+    <Content Include="ClientApp\src\app\modules\survey\survey.component.html" />
+    <Content Include="ClientApp\src\app\modules\test\test.component.css" />
+    <Content Include="ClientApp\src\app\modules\test\test.component.html" />
+    <Content Include="ClientApp\src\app\shared\layout\footer-only-layout\footer-only-layout.component.css" />
+    <Content Include="ClientApp\src\app\shared\layout\footer-only-layout\footer-only-layout.component.html" />
+    <Content Include="ClientApp\src\app\shared\layout\footer\footer.component.css" />
+    <Content Include="ClientApp\src\app\shared\layout\footer\footer.component.html" />
+    <Content Include="ClientApp\src\app\shared\layout\header\header.component.css" />
+    <Content Include="ClientApp\src\app\shared\layout\header\header.component.html" />
+    <Content Include="ClientApp\src\app\shared\layout\login-layout\login-layout.component.css" />
+    <Content Include="ClientApp\src\app\shared\layout\login-layout\login-layout.component.html" />
+    <Content Include="ClientApp\src\app\shared\layout\main-layout\main-layout.component.css" />
+    <Content Include="ClientApp\src\app\shared\layout\main-layout\main-layout.component.html" />
+    <Content Include="ClientApp\src\app\widgets\customspinner\custom-spinner.component.css" />
+    <Content Include="ClientApp\src\app\widgets\customspinner\custom-spinner.component.html" />
+    <Content Include="ClientApp\src\app\widgets\datatable\datatable.component.css" />
+    <Content Include="ClientApp\src\app\widgets\datatable\datatable.component.html" />
+    <Content Include="ClientApp\src\assets\css\animation.css" />
+    <Content Include="ClientApp\src\assets\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="ClientApp\src\assets\css\bootstrap-multiselect.css" />
+    <Content Include="ClientApp\src\assets\css\bootstrap.css" />
+    <Content Include="ClientApp\src\assets\css\bootstrap.min.css" />
+    <Content Include="ClientApp\src\assets\css\customRadioCheckbox.css" />
+    <Content Include="ClientApp\src\assets\css\dataTables.bootstrap.css" />
+    <Content Include="ClientApp\src\assets\css\dataTables.bootstrap4.min.css" />
+    <Content Include="ClientApp\src\assets\css\datatables.min.css" />
+    <Content Include="ClientApp\src\assets\css\editor.css" />
+    <Content Include="ClientApp\src\assets\css\fancy_fileupload.css" />
+    <Content Include="ClientApp\src\assets\css\faq-contact-style.css" />
+    <Content Include="ClientApp\src\assets\css\fixedColumns.bootstrap4.min.css" />
+    <Content Include="ClientApp\src\assets\css\fontawesome-free-5.11.2-web.css" />
+    <Content Include="ClientApp\src\assets\css\jquery-ui.css" />
+    <Content Include="ClientApp\src\assets\css\jquery.lwMultiSelect.css" />
+    <Content Include="ClientApp\src\assets\css\jquery.timepicker.css" />
+    <Content Include="ClientApp\src\assets\css\style-engage.css" />
+    <Content Include="ClientApp\src\assets\css\style-trends.css" />
+    <Content Include="ClientApp\src\assets\css\style.css" />
+    <Content Include="ClientApp\src\assets\fonts\fonts.css" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert-Bold.eot" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert-Bold.svg" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert-Bold.ttf" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert-Bold.woff" />
+    <Content Include="ClientApp\src\assets\fonts\fsalbert-regular-opentype_bigfontsite.com.otf" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert-Regular.eot" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert-Regular.otf" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert-Regular.svg" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert-Regular.ttf" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert-Regular.woff" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert.eot" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert.otf" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert.svg" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert.ttf" />
+    <Content Include="ClientApp\src\assets\fonts\FSAlbert.woff" />
+    <Content Include="ClientApp\src\assets\fonts\preview.html" />
+    <Content Include="ClientApp\src\assets\fonts\styles.css" />
+    <Content Include="ClientApp\src\assets\images\aarwnew.png" />
+    <Content Include="ClientApp\src\assets\images\acc-tab3-graph2.jpg" />
+    <Content Include="ClientApp\src\assets\images\acc-tab3-graph_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\acc.png" />
+    <Content Include="ClientApp\src\assets\images\accenture_graph_logo.png" />
+    <Content Include="ClientApp\src\assets\images\accenture_logo.png" />
+    <Content Include="ClientApp\src\assets\images\accenture_logo2.png" />
+    <Content Include="ClientApp\src\assets\images\acc_02.png" />
+    <Content Include="ClientApp\src\assets\images\acc_white.jpg" />
+    <Content Include="ClientApp\src\assets\images\add-icon.png" />
+    <Content Include="ClientApp\src\assets\images\add-user-icon.png" />
+    <Content Include="ClientApp\src\assets\images\ag-tab3-graph2.jpg" />
+    <Content Include="ClientApp\src\assets\images\ag-tab3-graph_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\ai-enrich.png" />
+    <Content Include="ClientApp\src\assets\images\alert.png" />
+    <Content Include="ClientApp\src\assets\images\alert2.png" />
+    <Content Include="ClientApp\src\assets\images\alert_icon.png" />
+    <Content Include="ClientApp\src\assets\images\amazon.png" />
+    <Content Include="ClientApp\src\assets\images\analyst-views.PNG" />
+    <Content Include="ClientApp\src\assets\images\analyst-views2.PNG" />
+    <Content Include="ClientApp\src\assets\images\apply_icon.png" />
+    <Content Include="ClientApp\src\assets\images\arrow_down.png" />
+    <Content Include="ClientApp\src\assets\images\arrow_full_left.png" />
+    <Content Include="ClientApp\src\assets\images\arrow_full_right.png" />
+    <Content Include="ClientApp\src\assets\images\arrow_graph.png" />
+    <Content Include="ClientApp\src\assets\images\arrow_high.png" />
+    <Content Include="ClientApp\src\assets\images\arrow_left.png" />
+    <Content Include="ClientApp\src\assets\images\arrow_low.png" />
+    <Content Include="ClientApp\src\assets\images\arrow_new_left.png" />
+    <Content Include="ClientApp\src\assets\images\arrow_new_right.png" />
+    <Content Include="ClientApp\src\assets\images\arrow_right.jpg" />
+    <Content Include="ClientApp\src\assets\images\arrow_right.png" />
+    <Content Include="ClientApp\src\assets\images\as-snapshot_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\as-snapshot_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\as-snapshot_03.jpg" />
+    <Content Include="ClientApp\src\assets\images\as-snapshot_04.jpg" />
+    <Content Include="ClientApp\src\assets\images\as-snapshot_05.jpg" />
+    <Content Include="ClientApp\src\assets\images\as-snapshot_06.jpg" />
+    <Content Include="ClientApp\src\assets\images\AT&amp;T_logo.png" />
+    <Content Include="ClientApp\src\assets\images\atm-grp1.jpg" />
+    <Content Include="ClientApp\src\assets\images\atm-grp2.jpg" />
+    <Content Include="ClientApp\src\assets\images\atm-grp3.jpg" />
+    <Content Include="ClientApp\src\assets\images\atm-grp4.jpg" />
+    <Content Include="ClientApp\src\assets\images\atm-white-space.jpg" />
+    <Content Include="ClientApp\src\assets\images\az-btn.png" />
+    <Content Include="ClientApp\src\assets\images\az-btn2.png" />
+    <Content Include="ClientApp\src\assets\images\bain-grp1.jpg" />
+    <Content Include="ClientApp\src\assets\images\bain-grp2.jpg" />
+    <Content Include="ClientApp\src\assets\images\bain-grp3.jpg" />
+    <Content Include="ClientApp\src\assets\images\bain-grp4.jpg" />
+    <Content Include="ClientApp\src\assets\images\bain-white-space.jpg" />
+    <Content Include="ClientApp\src\assets\images\bainCompany_logo.png" />
+    <Content Include="ClientApp\src\assets\images\bainCompany_logo2.png" />
+    <Content Include="ClientApp\src\assets\images\bandc-logo.png" />
+    <Content Include="ClientApp\src\assets\images\bcg-logo.png" />
+    <Content Include="ClientApp\src\assets\images\bell_icon.png" />
+    <Content Include="ClientApp\src\assets\images\bg-dotted-banner.png" />
+    <Content Include="ClientApp\src\assets\images\bg-engagement.jpg" />
+    <Content Include="ClientApp\src\assets\images\bg-login.jpg" />
+    <Content Include="ClientApp\src\assets\images\bg.jpg" />
+    <Content Include="ClientApp\src\assets\images\bg11.jpg" />
+    <Content Include="ClientApp\src\assets\images\bgc_logo.png" />
+    <Content Include="ClientApp\src\assets\images\bg_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\bg_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\bg_03.png" />
+    <Content Include="ClientApp\src\assets\images\BinaryHelix.png" />
+    <Content Include="ClientApp\src\assets\images\BinaryHelix_Black.jpg" />
+    <Content Include="ClientApp\src\assets\images\bookmark_icon.png" />
+    <Content Include="ClientApp\src\assets\images\browserconfig.xml" />
+    <Content Include="ClientApp\src\assets\images\ci-home_dotted.jpg" />
+    <Content Include="ClientApp\src\assets\images\close-icon.png" />
+    <Content Include="ClientApp\src\assets\images\closebtn.png" />
+    <Content Include="ClientApp\src\assets\images\Coffee-wheel.png" />
+    <Content Include="ClientApp\src\assets\images\collapse-icon.png" />
+    <Content Include="ClientApp\src\assets\images\comment.png" />
+    <Content Include="ClientApp\src\assets\images\comment_icon.png" />
+    <Content Include="ClientApp\src\assets\images\comment_icon2.png" />
+    <Content Include="ClientApp\src\assets\images\comment_tick.png" />
+    <Content Include="ClientApp\src\assets\images\Company-Overview.PNG" />
+    <Content Include="ClientApp\src\assets\images\Company-overview2.PNG" />
+    <Content Include="ClientApp\src\assets\images\Company-overview3.PNG" />
+    <Content Include="ClientApp\src\assets\images\company_overview_1.PNG" />
+    <Content Include="ClientApp\src\assets\images\company_overview_2.PNG" />
+    <Content Include="ClientApp\src\assets\images\consolidation.png" />
+    <Content Include="ClientApp\src\assets\images\contoso.jpg" />
+    <Content Include="ClientApp\src\assets\images\cross.png" />
+    <Content Include="ClientApp\src\assets\images\cross_tick.png" />
+    <Content Include="ClientApp\src\assets\images\Dashboard-1.png" />
+    <Content Include="ClientApp\src\assets\images\Dashboard-2.png" />
+    <Content Include="ClientApp\src\assets\images\Dashboard-3.png" />
+    <Content Include="ClientApp\src\assets\images\delete-icon.png" />
+    <Content Include="ClientApp\src\assets\images\Delete_Icon.png" />
+    <Content Include="ClientApp\src\assets\images\Delete_Icon_G.PNG" />
+    <Content Include="ClientApp\src\assets\images\deloitte.png" />
+    <Content Include="ClientApp\src\assets\images\deloitte_logo.jpg" />
+    <Content Include="ClientApp\src\assets\images\deloitte_logo.png" />
+    <Content Include="ClientApp\src\assets\images\dislike.png" />
+    <Content Include="ClientApp\src\assets\images\down-icon.png" />
+    <Content Include="ClientApp\src\assets\images\download-user-icon-white.png" />
+    <Content Include="ClientApp\src\assets\images\download-user-icon.png" />
+    <Content Include="ClientApp\src\assets\images\download_icon.png" />
+    <Content Include="ClientApp\src\assets\images\download_icon2.png" />
+    <Content Include="ClientApp\src\assets\images\download_icon_new.png" />
+    <Content Include="ClientApp\src\assets\images\download_icon_new2.png" />
+    <Content Include="ClientApp\src\assets\images\edit-icon.png" />
+    <Content Include="ClientApp\src\assets\images\emoji_sprite.png" />
+    <Content Include="ClientApp\src\assets\images\evalue_logo.png" />
+    <Content Include="ClientApp\src\assets\images\Executive_Summary.PNG" />
+    <Content Include="ClientApp\src\assets\images\expand-icon.png" />
+    <Content Include="ClientApp\src\assets\images\expand.png" />
+    <Content Include="ClientApp\src\assets\images\fancy_remove.png" />
+    <Content Include="ClientApp\src\assets\images\fancy_upload.png" />
+    <Content Include="ClientApp\src\assets\images\favicon-16x16.png" />
+    <Content Include="ClientApp\src\assets\images\favicon-32x32.png" />
+    <Content Include="ClientApp\src\assets\images\favicon-96x96.png" />
+    <Content Include="ClientApp\src\assets\images\favicon.ico" />
+    <Content Include="ClientApp\src\assets\images\favicons\android-icon-144x144.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\android-icon-192x192.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\android-icon-36x36.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\android-icon-48x48.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\android-icon-72x72.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\android-icon-96x96.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\apple-icon-114x114.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\apple-icon-120x120.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\apple-icon-144x144.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\apple-icon-152x152.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\apple-icon-180x180.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\apple-icon-57x57.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\apple-icon-60x60.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\apple-icon-72x72.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\apple-icon-76x76.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\apple-icon-precomposed.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\apple-icon.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\browserconfig.xml" />
+    <Content Include="ClientApp\src\assets\images\favicons\favicon-16x16.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\favicon-32x32.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\favicon-96x96.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\favicon.ico" />
+    <Content Include="ClientApp\src\assets\images\favicons\manifest.json" />
+    <Content Include="ClientApp\src\assets\images\favicons\ms-icon-144x144.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\ms-icon-150x150.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\ms-icon-310x310.png" />
+    <Content Include="ClientApp\src\assets\images\favicons\ms-icon-70x70.png" />
+    <Content Include="ClientApp\src\assets\images\filter_icon.png" />
+    <Content Include="ClientApp\src\assets\images\flag_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\flag_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\flag_03.jpg" />
+    <Content Include="ClientApp\src\assets\images\fn-snapshot_03.jpg" />
+    <Content Include="ClientApp\src\assets\images\fn-snapshot_04.jpg" />
+    <Content Include="ClientApp\src\assets\images\fn-snapshot_05.jpg" />
+    <Content Include="ClientApp\src\assets\images\fn-snapshot_06.jpg" />
+    <Content Include="ClientApp\src\assets\images\folder-icons.png" />
+    <Content Include="ClientApp\src\assets\images\Gattaca.PNG" />
+    <Content Include="ClientApp\src\assets\images\gparw.png" />
+    <Content Include="ClientApp\src\assets\images\gparw2.png" />
+    <Content Include="ClientApp\src\assets\images\gparw3.png" />
+    <Content Include="ClientApp\src\assets\images\gparw4.png" />
+    <Content Include="ClientApp\src\assets\images\gparw5.png" />
+    <Content Include="ClientApp\src\assets\images\graph.png" />
+    <Content Include="ClientApp\src\assets\images\graph1.jpg" />
+    <Content Include="ClientApp\src\assets\images\graph2.jpg" />
+    <Content Include="ClientApp\src\assets\images\graph3.jpg" />
+    <Content Include="ClientApp\src\assets\images\graph4.jpg" />
+    <Content Include="ClientApp\src\assets\images\graph_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\graph_02.png" />
+    <Content Include="ClientApp\src\assets\images\grp1.png" />
+    <Content Include="ClientApp\src\assets\images\grp2.png" />
+    <Content Include="ClientApp\src\assets\images\grp3.png" />
+    <Content Include="ClientApp\src\assets\images\grp4.png" />
+    <Content Include="ClientApp\src\assets\images\grp5.png" />
+    <Content Include="ClientApp\src\assets\images\grp6.png" />
+    <Content Include="ClientApp\src\assets\images\grp7.png" />
+    <Content Include="ClientApp\src\assets\images\grp8.png" />
+    <Content Include="ClientApp\src\assets\images\homepage-logos.png" />
+    <Content Include="ClientApp\src\assets\images\hover-arw-btn.png" />
+    <Content Include="ClientApp\src\assets\images\Ico-ariake.png" />
+    <Content Include="ClientApp\src\assets\images\icon-know-more.png" />
+    <Content Include="ClientApp\src\assets\images\icon-profile-signout.png" />
+    <Content Include="ClientApp\src\assets\images\icon-profile.png" />
+    <Content Include="ClientApp\src\assets\images\icon-signout.png" />
+    <Content Include="ClientApp\src\assets\images\iconcd1.png" />
+    <Content Include="ClientApp\src\assets\images\idd-g01.jpg" />
+    <Content Include="ClientApp\src\assets\images\idd-g02.jpg" />
+    <Content Include="ClientApp\src\assets\images\idd-g1.jpg" />
+    <Content Include="ClientApp\src\assets\images\idd-g10.jpg" />
+    <Content Include="ClientApp\src\assets\images\idd-g2.jpg" />
+    <Content Include="ClientApp\src\assets\images\idd-g3.jpg" />
+    <Content Include="ClientApp\src\assets\images\idd-g4.jpg" />
+    <Content Include="ClientApp\src\assets\images\idd-g5.jpg" />
+    <Content Include="ClientApp\src\assets\images\idd-g6.jpg" />
+    <Content Include="ClientApp\src\assets\images\idd-g7.jpg" />
+    <Content Include="ClientApp\src\assets\images\idd-g8.jpg" />
+    <Content Include="ClientApp\src\assets\images\idd-g9.jpg" />
+    <Content Include="ClientApp\src\assets\images\images.png" />
+    <Content Include="ClientApp\src\assets\images\img1.jpg" />
+    <Content Include="ClientApp\src\assets\images\info-icon.png" />
+    <Content Include="ClientApp\src\assets\images\info-tooltip-icon.png" />
+    <Content Include="ClientApp\src\assets\images\insights-icon.png" />
+    <Content Include="ClientApp\src\assets\images\insights-icon1.png" />
+    <Content Include="ClientApp\src\assets\images\insights-icon2.png" />
+    <Content Include="ClientApp\src\assets\images\insights-icon3.png" />
+    <Content Include="ClientApp\src\assets\images\insights-icon4.png" />
+    <Content Include="ClientApp\src\assets\images\investment_deepdive_graph_01.png" />
+    <Content Include="ClientApp\src\assets\images\investment_deepdive_graph_02.png" />
+    <Content Include="ClientApp\src\assets\images\Landing-page---popup.png" />
+    <Content Include="ClientApp\src\assets\images\landing-page.zip" />
+    <Content Include="ClientApp\src\assets\images\landing-page\bg_360-2.jpg" />
+    <Content Include="ClientApp\src\assets\images\landing-page\bg_360.jpg" />
+    <Content Include="ClientApp\src\assets\images\landing-page\cross_icon.png" />
+    <Content Include="ClientApp\src\assets\images\landing-page\gaph-image.png" />
+    <Content Include="ClientApp\src\assets\images\landing-page\logo_Barbara.jpg" />
+    <Content Include="ClientApp\src\assets\images\landing-page\msg_icon.png" />
+    <Content Include="ClientApp\src\assets\images\landing-page\pic_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\landing-page\pic_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\landing-page\slider-bg-1.jpg" />
+    <Content Include="ClientApp\src\assets\images\landing-page\slider-bg-2.jpg" />
+    <Content Include="ClientApp\src\assets\images\landing-page\slider-bg-3.jpg" />
+    <Content Include="ClientApp\src\assets\images\landing-page\slider-bg-4.jpg" />
+    <Content Include="ClientApp\src\assets\images\landing-page\slider-bg-5.jpg" />
+    <Content Include="ClientApp\src\assets\images\left.jpg" />
+    <Content Include="ClientApp\src\assets\images\like.png" />
+    <Content Include="ClientApp\src\assets\images\LitWare.PNG" />
+    <Content Include="ClientApp\src\assets\images\live_chat.jpg" />
+    <Content Include="ClientApp\src\assets\images\loader.png" />
+    <Content Include="ClientApp\src\assets\images\logo.png" />
+    <Content Include="ClientApp\src\assets\images\logo2.png" />
+    <Content Include="ClientApp\src\assets\images\logo_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\logo_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\logo_03.jpg" />
+    <Content Include="ClientApp\src\assets\images\logo_03.png" />
+    <Content Include="ClientApp\src\assets\images\logo_04.jpg" />
+    <Content Include="ClientApp\src\assets\images\logo_05.jpg" />
+    <Content Include="ClientApp\src\assets\images\logo_login.png" />
+    <Content Include="ClientApp\src\assets\images\mail_icon.png" />
+    <Content Include="ClientApp\src\assets\images\mckinsey.jpg" />
+    <Content Include="ClientApp\src\assets\images\mckinsey.png" />
+    <Content Include="ClientApp\src\assets\images\mckinsey1.jpg" />
+    <Content Include="ClientApp\src\assets\images\menu-engage.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon\Alerts.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon\Dashboard.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon\faq.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon\Help.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon\home.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon\investment_library.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon\menuicon_01.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon\menuicon_13.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon\Newsletter.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon\thought_leadership.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_01.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_02.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_03.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_04.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_05.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_06.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_07.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_08.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_09.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_10.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_11.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_12.png" />
+    <Content Include="ClientApp\src\assets\images\menuicon_13.png" />
+    <Content Include="ClientApp\src\assets\images\mid-logo1.png" />
+    <Content Include="ClientApp\src\assets\images\mid-logo2.png" />
+    <Content Include="ClientApp\src\assets\images\mid-logo3.png" />
+    <Content Include="ClientApp\src\assets\images\mid-logo4.png" />
+    <Content Include="ClientApp\src\assets\images\mid-logo5.png" />
+    <Content Include="ClientApp\src\assets\images\ms-icon-144x144.png" />
+    <Content Include="ClientApp\src\assets\images\ms-icon-150x150.png" />
+    <Content Include="ClientApp\src\assets\images\ms-icon-310x310.png" />
+    <Content Include="ClientApp\src\assets\images\ms-icon-70x70.png" />
+    <Content Include="ClientApp\src\assets\images\neu-btn.png" />
+    <Content Include="ClientApp\src\assets\images\neu-btn2.png" />
+    <Content Include="ClientApp\src\assets\images\News-1.png" />
+    <Content Include="ClientApp\src\assets\images\News-10.png" />
+    <Content Include="ClientApp\src\assets\images\News-2.png" />
+    <Content Include="ClientApp\src\assets\images\News-3.png" />
+    <Content Include="ClientApp\src\assets\images\News-4.png" />
+    <Content Include="ClientApp\src\assets\images\News-5.png" />
+    <Content Include="ClientApp\src\assets\images\News-6.png" />
+    <Content Include="ClientApp\src\assets\images\News-7.png" />
+    <Content Include="ClientApp\src\assets\images\News-8.png" />
+    <Content Include="ClientApp\src\assets\images\News-9.png" />
+    <Content Include="ClientApp\src\assets\images\news1.png" />
+    <Content Include="ClientApp\src\assets\images\news2.png" />
+    <Content Include="ClientApp\src\assets\images\openbtn2.png" />
+    <Content Include="ClientApp\src\assets\images\oppai.png" />
+    <Content Include="ClientApp\src\assets\images\pdf-icon.png" />
+    <Content Include="ClientApp\src\assets\images\pdf.jpg" />
+    <Content Include="ClientApp\src\assets\images\pic_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\plnew.png" />
+    <Content Include="ClientApp\src\assets\images\plus-btn-hover.png" />
+    <Content Include="ClientApp\src\assets\images\plus-btn-white.png" />
+    <Content Include="ClientApp\src\assets\images\plus_icon.png" />
+    <Content Include="ClientApp\src\assets\images\plus_icon_02.png" />
+    <Content Include="ClientApp\src\assets\images\ppt_icon.png" />
+    <Content Include="ClientApp\src\assets\images\prfile_icon.png" />
+    <Content Include="ClientApp\src\assets\images\product-strategy.png" />
+    <Content Include="ClientApp\src\assets\images\product-strategy1.png" />
+    <Content Include="ClientApp\src\assets\images\product-strategy2.png" />
+    <Content Include="ClientApp\src\assets\images\profile_icon.jpg" />
+    <Content Include="ClientApp\src\assets\images\projectbar.jpg" />
+    <Content Include="ClientApp\src\assets\images\projectrule.jpg" />
+    <Content Include="ClientApp\src\assets\images\projectrule1.jpg" />
+    <Content Include="ClientApp\src\assets\images\red-space.png" />
+    <Content Include="ClientApp\src\assets\images\refresh_btn.png" />
+    <Content Include="ClientApp\src\assets\images\refresh_btn2.png" />
+    <Content Include="ClientApp\src\assets\images\reportbtnicon.png" />
+    <Content Include="ClientApp\src\assets\images\report_icon.png" />
+    <Content Include="ClientApp\src\assets\images\rightarrw.png" />
+    <Content Include="ClientApp\src\assets\images\rightarrww.png" />
+    <Content Include="ClientApp\src\assets\images\rightarrww1.png" />
+    <Content Include="ClientApp\src\assets\images\right_tick.png" />
+    <Content Include="ClientApp\src\assets\images\sales-and-marketing-channel.png" />
+    <Content Include="ClientApp\src\assets\images\search_icon.png" />
+    <Content Include="ClientApp\src\assets\images\search_icon2.png" />
+    <Content Include="ClientApp\src\assets\images\share-icon.png" />
+    <Content Include="ClientApp\src\assets\images\share_icon.png" />
+    <Content Include="ClientApp\src\assets\images\share_icon2.png" />
+    <Content Include="ClientApp\src\assets\images\share_icon_new.png" />
+    <Content Include="ClientApp\src\assets\images\share_icon_new2.png" />
+    <Content Include="ClientApp\src\assets\images\si-tab-graph2.jpg" />
+    <Content Include="ClientApp\src\assets\images\si-tab-graph_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\si-tab-graph_01_banking.jpg" />
+    <Content Include="ClientApp\src\assets\images\si-tab-graph_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\si-tab-graph_02_banking.jpg" />
+    <Content Include="ClientApp\src\assets\images\si-tab-graph_03.jpg" />
+    <Content Include="ClientApp\src\assets\images\si-tab-graph_03_banking.jpg" />
+    <Content Include="ClientApp\src\assets\images\si-tab-graph_04.jpg" />
+    <Content Include="ClientApp\src\assets\images\si-tab-graph_04_banking.jpg" />
+    <Content Include="ClientApp\src\assets\images\si-tab-graph_05.jpg" />
+    <Content Include="ClientApp\src\assets\images\si-tab2-graph2.jpg" />
+    <Content Include="ClientApp\src\assets\images\si-tab2-graph3.jpg" />
+    <Content Include="ClientApp\src\assets\images\Sirta.PNG" />
+    <Content Include="ClientApp\src\assets\images\si_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\si_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\si_icon_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\si_icon_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\si_icon_03.jpg" />
+    <Content Include="ClientApp\src\assets\images\skincare_ai.jpg" />
+    <Content Include="ClientApp\src\assets\images\slide.jpg" />
+    <Content Include="ClientApp\src\assets\images\snapshot_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\snapshot_01.png" />
+    <Content Include="ClientApp\src\assets\images\snapshot_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\snapshot_03.jpg" />
+    <Content Include="ClientApp\src\assets\images\snapshot_04.jpg" />
+    <Content Include="ClientApp\src\assets\images\snapshot_05.jpg" />
+    <Content Include="ClientApp\src\assets\images\snapshot_06.jpg" />
+    <Content Include="ClientApp\src\assets\images\sort.png" />
+    <Content Include="ClientApp\src\assets\images\sprite-OI.png" />
+    <Content Include="ClientApp\src\assets\images\star.png" />
+    <Content Include="ClientApp\src\assets\images\star_icon.png" />
+    <Content Include="ClientApp\src\assets\images\star_icon2.png" />
+    <Content Include="ClientApp\src\assets\images\stevisse.jpg" />
+    <Content Include="ClientApp\src\assets\images\sturm.jpg" />
+    <Content Include="ClientApp\src\assets\images\tab-arw-1.png" />
+    <Content Include="ClientApp\src\assets\images\tab-arw-2.png" />
+    <Content Include="ClientApp\src\assets\images\tab-arw-3.png" />
+    <Content Include="ClientApp\src\assets\images\tab-graph-1.jpg" />
+    <Content Include="ClientApp\src\assets\images\tab3-graph1.jpg" />
+    <Content Include="ClientApp\src\assets\images\tab3-graph2.jpg" />
+    <Content Include="ClientApp\src\assets\images\tab3-graph4.jpg" />
+    <Content Include="ClientApp\src\assets\images\tab3-graph_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\table-cross.png" />
+    <Content Include="ClientApp\src\assets\images\table-download.png" />
+    <Content Include="ClientApp\src\assets\images\table-img1.png" />
+    <Content Include="ClientApp\src\assets\images\table-tick.png" />
+    <Content Include="ClientApp\src\assets\images\table-view.png" />
+    <Content Include="ClientApp\src\assets\images\tab_icon_01.png" />
+    <Content Include="ClientApp\src\assets\images\tab_icon_02.png" />
+    <Content Include="ClientApp\src\assets\images\tab_icon_03.png" />
+    <Content Include="ClientApp\src\assets\images\tab_icon_04.png" />
+    <Content Include="ClientApp\src\assets\images\tab_icon_05.png" />
+    <Content Include="ClientApp\src\assets\images\Technology-Boat.PNG" />
+    <Content Include="ClientApp\src\assets\images\thought_leadership.png" />
+    <Content Include="ClientApp\src\assets\images\Thought_Leadership_bg.jpg" />
+    <Content Include="ClientApp\src\assets\images\Thought_Leadership_bg_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\thought_leadership_graph_01.png" />
+    <Content Include="ClientApp\src\assets\images\thought_leadership_graph_02.png" />
+    <Content Include="ClientApp\src\assets\images\thought_leadership_graph_03.png" />
+    <Content Include="ClientApp\src\assets\images\thought_leadership_graph_04.png" />
+    <Content Include="ClientApp\src\assets\images\thought_leader_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\thought_leader_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\thought_leader_03.jpg" />
+    <Content Include="ClientApp\src\assets\images\tick-mark.png" />
+    <Content Include="ClientApp\src\assets\images\tidy-data.png" />
+    <Content Include="ClientApp\src\assets\images\TOWERSoftwareLogo.jpg" />
+    <Content Include="ClientApp\src\assets\images\trends_img_01.jpg" />
+    <Content Include="ClientApp\src\assets\images\trends_img_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\trends_img_03.jpg" />
+    <Content Include="ClientApp\src\assets\images\triangle-arrow.png" />
+    <Content Include="ClientApp\src\assets\images\user-icon.png" />
+    <Content Include="ClientApp\src\assets\images\usericon.png" />
+    <Content Include="ClientApp\src\assets\images\weekly.jpg" />
+    <Content Include="ClientApp\src\assets\images\white-space-as_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\white-space-fn_02.jpg" />
+    <Content Include="ClientApp\src\assets\images\white-space-tel-02.jpg" />
+    <Content Include="ClientApp\src\assets\images\white-space.png" />
+    <Content Include="ClientApp\src\assets\images\white-space_02.png" />
+    <Content Include="ClientApp\src\assets\images\white-space_03.png" />
+    <Content Include="ClientApp\src\assets\images\xls-icon.png" />
+    <Content Include="ClientApp\src\assets\images\yearly.jpg" />
+    <Content Include="ClientApp\src\assets\images\yellowstar.png" />
+    <Content Include="ClientApp\tsconfig.app.json" />
+    <Content Include="ClientApp\tsconfig.json" />
+    <Content Include="ClientApp\tsconfig.spec.json" />
+    <Content Include="ClientApp\tslint.json" />
+    <TypeScriptCompile Include="ClientApp\e2e\src\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="ClientApp\e2e\src\app.po.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\config\api-config.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\config\app-enum.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\config\app-session.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\config\app-util.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\core.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\guards\auth.guard.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\services\api-interceptor.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\services\auth-guard.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\services\customvalidation.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\services\env.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\services\http.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\authentication\authentication-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\authentication\authentication.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\authentication\authentication.model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\authentication\authentication.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\bridge2home\bridge2home-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\bridge2home\bridge2home.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\bridge2home\bridge2home.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\error\error-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\error\error.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\error\error.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\error\page-not-found.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\error\unauthorized.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\faq\faq-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\faq\faq.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\faq\faq.model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\faq\faq.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\heatmap\heatmap-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\heatmap\heatmap.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\heatmap\heatmap.model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\heatmap\heatmap.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\home\home-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\home\home.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\home\home.model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\home\home.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\surveytrend\surveytrend-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\surveytrend\surveytrend.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\surveytrend\surveytrend.model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\surveytrend\surveytrend.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\survey\survey-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\survey\survey.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\survey\survey.model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\survey\survey.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\test\test-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\test\test.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modules\test\test.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\layout\footer-only-layout\footer-only-layout.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\layout\footer\footer.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\layout\header\header.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\layout\login-layout\login-layout.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\layout\main-layout\main-layout.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\shared.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\widgets\customspinner\custom-spinner.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\widgets\customspinner\custom-spinner.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\widgets\datatable\datatable.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\widgets\datatable\datatable.model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\widgets\datatable\datatable.module.ts" />
+    <TypeScriptCompile Include="server.ts" />
+    <Content Include="ClientApp\e2e\tsconfig.json" />
+    <Content Include="ClientApp\src\app\app.component.css" />
+    <Content Include="ClientApp\src\app\app.component.html" />
+    <Content Include="ClientApp\src\assets\.gitkeep" />
+    <Content Include="ClientApp\src\favicon.ico" />
+    <Content Include="ClientApp\src\index.html" />
+    <Content Include="ClientApp\src\styles.css" />
+    <TypeScriptCompile Include="ClientApp\src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="ClientApp\src\environments\environment.ts" />
+    <TypeScriptCompile Include="ClientApp\src\main.ts" />
+    <TypeScriptCompile Include="ClientApp\src\polyfills.ts" />
+    <TypeScriptCompile Include="ClientApp\src\test.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClientApp\e2e\" />
+    <Folder Include="ClientApp\e2e\src\" />
+    <Folder Include="ClientApp\" />
+    <Folder Include="ClientApp\src\" />
+    <Folder Include="ClientApp\src\app\" />
+    <Folder Include="ClientApp\src\app\core\" />
+    <Folder Include="ClientApp\src\app\core\config\" />
+    <Folder Include="ClientApp\src\app\core\guards\" />
+    <Folder Include="ClientApp\src\app\core\services\" />
+    <Folder Include="ClientApp\src\app\modules\" />
+    <Folder Include="ClientApp\src\app\modules\authentication\" />
+    <Folder Include="ClientApp\src\app\modules\bridge2home\" />
+    <Folder Include="ClientApp\src\app\modules\error\" />
+    <Folder Include="ClientApp\src\app\modules\faq\" />
+    <Folder Include="ClientApp\src\app\modules\heatmap\" />
+    <Folder Include="ClientApp\src\app\modules\home\" />
+    <Folder Include="ClientApp\src\app\modules\surveytrend\" />
+    <Folder Include="ClientApp\src\app\modules\survey\" />
+    <Folder Include="ClientApp\src\app\modules\test\" />
+    <Folder Include="ClientApp\src\app\shared\" />
+    <Folder Include="ClientApp\src\app\shared\layout\" />
+    <Folder Include="ClientApp\src\app\shared\layout\footer-only-layout\" />
+    <Folder Include="ClientApp\src\app\shared\layout\footer\" />
+    <Folder Include="ClientApp\src\app\shared\layout\header\" />
+    <Folder Include="ClientApp\src\app\shared\layout\login-layout\" />
+    <Folder Include="ClientApp\src\app\shared\layout\main-layout\" />
+    <Folder Include="ClientApp\src\app\widgets\" />
+    <Folder Include="ClientApp\src\app\widgets\customspinner\" />
+    <Folder Include="ClientApp\src\app\widgets\datatable\" />
+    <Folder Include="ClientApp\src\assets\" />
+    <Folder Include="ClientApp\src\assets\css\" />
+    <Folder Include="ClientApp\src\assets\fonts\" />
+    <Folder Include="ClientApp\src\assets\images\" />
+    <Folder Include="ClientApp\src\assets\images\favicons\" />
+    <Folder Include="ClientApp\src\assets\images\landing-page\" />
+    <Folder Include="ClientApp\src\assets\images\menuicon\" />
+    <Folder Include="ClientApp\src\assets\js\" />
+    <Folder Include="ClientApp\src\environments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientApp\e2e\protractor.conf.js" />
+    <Compile Include="ClientApp\karma.conf.js" />
+    <Compile Include="ClientApp\src\assets\css\jquery.dataTables.min.js" />
+    <Compile Include="ClientApp\src\assets\js\bootstrap-datetimepicker.min.js" />
+    <Compile Include="ClientApp\src\assets\js\bootstrap-multiselect.js" />
+    <Compile Include="ClientApp\src\assets\js\bootstrap-select.js" />
+    <Compile Include="ClientApp\src\assets\js\bootstrap.bundle.min.js" />
+    <Compile Include="ClientApp\src\assets\js\bootstrap.min.js" />
+    <Compile Include="ClientApp\src\assets\js\dataTables.bootstrap4.min.js" />
+    <Compile Include="ClientApp\src\assets\js\datatables.min.js" />
+    <Compile Include="ClientApp\src\assets\js\daterage.js" />
+    <Compile Include="ClientApp\src\assets\js\editor.js" />
+    <Compile Include="ClientApp\src\assets\js\fixedColumns.bootstrap4.min.js" />
+    <Compile Include="ClientApp\src\assets\js\fullscreenscript.js" />
+    <Compile Include="ClientApp\src\assets\js\index.js" />
+    <Compile Include="ClientApp\src\assets\js\jquery-3.3.1.slim.min.js" />
+    <Compile Include="ClientApp\src\assets\js\jquery-3.4.1.min.js" />
+    <Compile Include="ClientApp\src\assets\js\jquery-ui.js" />
+    <Compile Include="ClientApp\src\assets\js\jquery.dataTables.min.js" />
+    <Compile Include="ClientApp\src\assets\js\jquery.fancy-fileupload.js" />
+    <Compile Include="ClientApp\src\assets\js\jquery.fileupload.js" />
+    <Compile Include="ClientApp\src\assets\js\jquery.iframe-transport.js" />
+    <Compile Include="ClientApp\src\assets\js\jquery.lwMultiSelect.js" />
+    <Compile Include="ClientApp\src\assets\js\jquery.slimscroll.min.js" />
+    <Compile Include="ClientApp\src\assets\js\jquery.timepicker.min.js" />
+    <Compile Include="ClientApp\src\assets\js\jquery.ui.widget.js" />
+    <Compile Include="ClientApp\src\assets\js\login.js" />
+    <Compile Include="ClientApp\src\assets\js\moment.min.js" />
+    <Compile Include="ClientApp\src\assets\js\popper.min.js" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
